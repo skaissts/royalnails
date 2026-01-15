@@ -85,12 +85,12 @@ const Gallery = () => {
             <div className={`w-32 h-0.5 bg-gradient-to-r from-transparent via-gold-500 to-transparent mx-auto rounded-full scroll-reveal ${titleRevealed ? 'revealed' : ''}`} style={{ transitionDelay: '0.2s' }}></div>
           </div>
 
-          <div className="flex flex-wrap gap-3 sm:gap-4 justify-center">
+          <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
             {galleryImages.map((image) => (
               <div
                 key={image.id}
                 onClick={() => openModal(image)}
-                className={`w-[calc(50%-0.25rem)] sm:w-[calc(33.333%-0.67rem)] aspect-square overflow-hidden elegant-box group cursor-pointer relative max-w-md scroll-reveal ${titleRevealed ? 'revealed' : ''}`}
+                className={`w-[calc(50%-0.25rem)] sm:w-[calc(50%-0.375rem)] md:w-[calc(33.333%-0.67rem)] aspect-square overflow-hidden elegant-box group cursor-pointer relative max-w-md scroll-reveal ${titleRevealed ? 'revealed' : ''}`}
                 style={{ transitionDelay: `${(image.id - 1) * 0.05}s` }}
               >
                 <img

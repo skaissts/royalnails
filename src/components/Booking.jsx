@@ -20,7 +20,8 @@ const Booking = () => {
         <div className="text-center mb-16 sm:mb-20">
           <h2 
             ref={titleRef}
-            className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-8 sm:mb-10 text-gradient-shimmer leading-tight scroll-reveal ${titleRevealed ? 'revealed' : ''}`}
+            className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-8 sm:mb-10 text-gradient-shimmer leading-normal pb-2 scroll-reveal ${titleRevealed ? 'revealed' : ''}`}
+            style={{ lineHeight: '1.2', paddingBottom: '0.5rem' }}
           >
             {t.booking.title}
           </h2>
