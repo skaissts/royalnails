@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden hero-gradient px-4 sm:px-6 lg:px-8"
+      className="relative w-full min-h-[50vh] sm:min-h-screen flex flex-col items-center justify-center overflow-hidden hero-gradient px-4 sm:px-6 lg:px-8"
     >
       {/* Main Content Container - Centered Logo */}
       <div className={`w-full max-w-full mx-auto flex flex-col items-center justify-center z-10 transition-all duration-1000 transform ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
