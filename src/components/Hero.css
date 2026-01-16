@@ -47,8 +47,8 @@
 
 /* Logo - centered in the middle */
 .hero__logo {
-  max-width: 95%;
-  width: clamp(320px, 85vw, 720px);
+  max-width: 100%;
+  width: clamp(360px, 100vw, 1100px);
   height: auto;
   filter: drop-shadow(0 4px 20px rgba(212, 175, 55, 0.3));
 }
