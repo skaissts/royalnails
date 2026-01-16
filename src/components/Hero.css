@@ -31,7 +31,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-bottom: clamp(1rem, 3vh, 2rem);
 
   /* Animation */
   opacity: 0;
