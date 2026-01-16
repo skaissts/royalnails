@@ -1,12 +1,11 @@
-/* Hero Section - Strict Vertical Layout System */
+/* Hero Section - Split Layout: Logo centered, content at bottom */
 
 .hero {
   position: relative;
   width: 100%;
   min-height: 100svh;
-  display: grid;
-  place-items: center;
-  padding-bottom: clamp(2rem, 10vh, 6rem);
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   background: linear-gradient(to bottom, #0a0a0a, #000);
 }
@@ -25,13 +24,15 @@
   z-index: 10;
   max-width: 960px;
   width: 100%;
+  margin: 0 auto;
   padding-inline: clamp(1rem, 5vw, 4rem);
-  
+  flex: 1;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(1rem, 3vh, 2.2rem);
-  
+  justify-content: center;
+
   /* Animation */
   opacity: 0;
   transform: translateY(20px);
@@ -43,25 +44,35 @@
   transform: translateY(0);
 }
 
-/* Logo */
+/* Logo - centered in the middle */
 .hero__logo {
-  max-width: 90%;
-  width: clamp(280px, 70vw, 720px);
+  max-width: 95%;
+  width: clamp(320px, 85vw, 720px);
   height: auto;
   filter: drop-shadow(0 4px 20px rgba(212, 175, 55, 0.3));
+}
+
+/* Bottom Content Block */
+.hero__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1rem, 2.5vh, 1.5rem);
+  padding-bottom: clamp(3rem, 12vh, 6rem);
+  padding-top: clamp(1rem, 3vh, 2rem);
 }
 
 /* Subtitle */
 .hero__subtitle {
   max-width: 42ch;
   text-align: center;
-  font-size: clamp(0.85rem, 1.5vw, 1.15rem);
+  font-size: clamp(0.75rem, 2.5vw, 1.15rem);
   font-weight: 300;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #d1d5db;
   margin: 0;
-  padding: 0;
+  padding: 0 1rem;
 }
 
 /* Buttons Wrapper */
@@ -76,7 +87,7 @@
 .hero__btn {
   max-width: 280px;
   padding: 0.875rem 2rem;
-  font-size: clamp(0.8rem, 1vw, 0.95rem);
+  font-size: clamp(0.75rem, 2vw, 0.95rem);
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -115,7 +126,7 @@
     width: auto;
     align-items: center;
   }
-  
+
   .hero__btn {
     width: 100%;
     max-width: 260px;

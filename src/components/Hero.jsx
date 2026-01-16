@@ -17,21 +17,21 @@ const Hero = () => {
       {/* Background Decor */}
       <div className="hero__bg"></div>
 
-      {/* Central Column Container */}
+      {/* Central Column Container - Logo centered */}
       <div className={`hero__container ${isLoaded ? 'hero__container--loaded' : ''}`}>
-        {/* Logo */}
         <img
           src="/logo.png"
           alt="Royal Nails by Cristina"
           className="hero__logo"
         />
+      </div>
 
-        {/* Subtitle */}
+      {/* Bottom Content Block */}
+      <div className={`hero__bottom ${isLoaded ? 'hero__container--loaded' : ''}`}>
         <p className="hero__subtitle">
           Premium Nagelstudio in Wien
         </p>
 
-        {/* Buttons Wrapper */}
         <div className="hero__buttons">
           <a href="#booking" className="hero__btn hero__btn--outline">
             {t.hero.bookButton}
